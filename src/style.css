@@ -1,0 +1,182 @@
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.container {
+    margin: 0 auto;
+    width: 750px;
+}
+@media only screen and (max-width: 750px) {
+    .container {
+        width: calc(100% - 15px);
+    }
+}
+
+.main-loader--wrapper {
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    background: #8f8a8a57;
+}
+
+
+.task-container {
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #c1c1c1;
+}
+.task-container.no-padding {
+    padding: 0;
+}
+.input-group {
+    display: flex;
+    width: 100%;
+}
+.input-group .input-control {
+    height: 30px;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px 0 0 4px;
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+.input-group .input-control.input-success {
+    border-color: #017f01;
+}
+.input-group .input-control.input-error {
+    border-color: #bc0000;
+}
+.input-group .submit-btn {
+    padding: 5px 20px;
+    border: 1px solid #c1c1c1;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 0;
+    gap: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.tasks--wrapper .no-record-label {
+    text-align: center;
+    padding: 15px;
+}
+.tasks--wrapper ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.tasks--wrapper ul li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 15px;
+    align-content: center;
+    align-items: center;
+    border-bottom: 1px solid #c1c1c1;
+}
+.tasks--wrapper ul li .serial-num {
+    min-width: 25px;
+}
+.tasks--wrapper ul li .primary-text {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tasks--wrapper ul li .delete-btn {
+    visibility: hidden;
+    border-radius: 100px;
+    background: none;
+    border: 0;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.tasks--wrapper ul li .delete-btn:hover {
+    box-shadow: 0 0 10px #fd020266;
+}
+.tasks--wrapper ul li:hover {
+    background: #091e4214;
+}
+.tasks--wrapper ul li:hover .delete-btn {
+    visibility: visible;
+}
+.tasks--wrapper .pagination-container {
+    padding: 25px 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.tasks--wrapper .pagination-container .limit-controls--group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tasks--wrapper .pagination-container .page-label {
+    white-space: nowrap;
+}
+.tasks--wrapper .pagination-container .limit-controls {
+    border: 1px solid #c1c1c1;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 16px;
+    outline: none;
+    height: 30px;
+}
+.pagination--wrapper {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.pagination--wrapper .page-item {
+    outline: none;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background: #091e4214;
+}
+.pagination--wrapper .page-item.txt-unicode {
+    font-size: 20px;
+    font-weight: bold;
+}
+.pagination--wrapper .page-item:disabled {
+    user-select: none;
+    cursor: not-allowed;
+    background: #091e420d !important;
+}
+.pagination--wrapper .page-item.active {
+    background: #017f01 !important;
+    color: #fff;
+}
+.pagination--wrapper .page-item:hover {
+    background: #091e4240;
+}
